@@ -12,32 +12,32 @@ class HomeScreen extends StatelessWidget {
       {
         "title": "breakfast_smoothie".tr(),
         "calories": "350_calories".tr(),
-        "image": "assets/pngs/breakfast_smoothie.png"
+        "image": "assets/pngs/breakfast_smoothie.png",
       },
       {
         "title": "breakfast_smoothie".tr(),
         "calories": "350_calories".tr(),
-        "image": "assets/pngs/breakfast_smoothie.png"
+        "image": "assets/pngs/breakfast_smoothie.png",
       },
       {
         "title": "chicken_salad".tr(),
         "calories": "600_calories".tr(),
-        "image": "assets/pngs/salad.png"
+        "image": "assets/pngs/salad.png",
       },
       {
         "title": "vegetable_soup".tr(),
         "calories": "450_calories".tr(),
-        "image": "assets/pngs/soup.png"
+        "image": "assets/pngs/soup.png",
       },
       {
         "title": "breakfast_smoothie".tr(),
         "calories": "350_calories".tr(),
-        "image": "assets/pngs/breakfast_smoothie.png"
+        "image": "assets/pngs/breakfast_smoothie.png",
       },
       {
         "title": "breakfast_smoothie".tr(),
         "calories": "350_calories".tr(),
-        "image": "assets/pngs/breakfast_smoothie.png"
+        "image": "assets/pngs/breakfast_smoothie.png",
       },
     ];
 
@@ -53,14 +53,19 @@ class HomeScreen extends StatelessWidget {
                   child: Text(
                     "my_meals".tr(),
                     style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.bold),
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.secondaryColor,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
                 Text(
                   "my_meals".tr(),
                   style: const TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.bold),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 8),
                 ListView.builder(
@@ -86,11 +91,17 @@ class HomeScreen extends StatelessWidget {
         unselectedItemColor: AppColor.secondaryColor,
         items: [
           BottomNavigationBarItem(
-              icon: const Icon(Icons.home), label: "home".tr()),
+            icon: const Icon(Icons.home),
+            label: "home".tr(),
+          ),
           BottomNavigationBarItem(
-              icon: const Icon(Icons.add), label: "add_meal".tr()),
+            icon: const Icon(Icons.add_box_outlined),
+            label: "add_meal".tr(),
+          ),
           BottomNavigationBarItem(
-              icon: const Icon(Icons.person), label: "profile".tr()),
+            icon: const Icon(Icons.person),
+            label: "profile".tr(),
+          ),
         ],
       ),
     );

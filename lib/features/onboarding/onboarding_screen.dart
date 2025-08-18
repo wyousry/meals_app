@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:meals_app/core/app_color.dart';
+import 'package:meals_app/core/app_router.dart';
+import 'package:meals_app/core/assets.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'onboarding_data.dart';
 import 'onboarding_page.dart';
@@ -27,16 +30,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     }
   }
 
-  void goToNextPage() {
+  Future<void> goToNextPage() async {
     if (pageIndex < onboardingTitles.length - 1) {
       sliderController.nextPage();
     } else {
-      debugPrint("Go to Home or Login screen");
+      await _finishOnboarding(context); 
     }
   }
 
-  void skipOnboarding() {
-    debugPrint("Skip onboarding");
+  Future<void> skipOnboarding() async {
+    await _finishOnboarding(context);
+  }
+
+ Future<void> _finishOnboarding(BuildContext context) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isFirstTime', false);
+    Navigator.pushReplacementNamed(context, AppRouter.homeLayers);
   }
 
   @override
@@ -45,18 +54,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent, 
-        elevation: 0, 
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         actions: [
           IconButton(
             onPressed: changeLanguage,
             icon: const Icon(Icons.language),
-            color: Colors.black,
+            color: AppColor.secondaryColor,
             style: ButtonStyle(
               iconSize: MaterialStateProperty.all(24.sp),
-              padding: MaterialStateProperty.all(EdgeInsets.all(8.w)
-            ), 
-            )
+              padding: MaterialStateProperty.all(EdgeInsets.all(8.w)),
+            ),
           ),
         ],
       ),
@@ -70,7 +78,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               height: size.height,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/pngs/background_image.png'),
+                  image: AssetImage(AssetsData.onboardingBackground),
                   fit: BoxFit.cover,
                 ),
               ),

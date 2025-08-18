@@ -5,6 +5,7 @@ import 'package:meals_app/my_app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  
   runApp(
     EasyLocalization(
       supportedLocales: [Locale('en'), Locale('ar')],

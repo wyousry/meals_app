@@ -7,5 +7,5 @@ class AssetsData {
   static const String salad = 'assets/pngs/food.jpg';
   static const String spaghettiWithChicken =
       'assets/pngs/spagitee_with_chicken.png';
-  static const String me = 'assets/pngs/ME.jpg';
+
 }

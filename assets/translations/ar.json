@@ -24,5 +24,16 @@
     "rate": "التقييم",
     "description": "الوصف",
     "time": "الوقت",
-    "save": "حفظ"
+    "save": "حفظ",
+     "Please_enter_meal_name": "  أدخل اسم الوجبة",
+    "Please_enter_image_URL": "  أدخل رابط الصورة",
+    "Please_enter_description": " أدخل وصف الوجبة",
+    "Please_enter_rate": "  أدخل التقييم",
+    "Meal_saved_successfully!": " تم الحفظ بنجاح!",
+    "No_meals_added_yet": "لا يوجد وجبات حتى الان.",
+    "calories_text": "{} سعرة حرارية",
+      "edit_profile": "تعديل الملف الشخصي",
+        "settings": "الإعدادات",
+        "language": "اللغة",
+        "logout": "تسجيل الخروج"
 }

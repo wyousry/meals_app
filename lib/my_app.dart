@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:meals_app/core/app_router.dart';
 import 'package:meals_app/features/bottom_navigation_bar/home_layers.dart';
-import 'package:meals_app/features/bottom_navigation_bar/tabs/add_meal.dart';
+import 'package:meals_app/features/bottom_navigation_bar/tabs/add_meal/add_meal.dart';
 import 'package:meals_app/features/bottom_navigation_bar/tabs/profile_screen.dart';
 import 'package:meals_app/features/home/home_page.dart';
 import 'package:meals_app/features/onboarding/onboarding_screen.dart';

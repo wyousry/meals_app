@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:meals_app/core/app_color.dart';
-import 'package:meals_app/features/bottom_navigation_bar/tabs/add_meal.dart';
+import 'package:meals_app/features/bottom_navigation_bar/tabs/add_meal/add_meal.dart';
 import 'package:meals_app/features/bottom_navigation_bar/tabs/profile_screen.dart';
 import 'package:meals_app/features/home/home_page.dart';
 

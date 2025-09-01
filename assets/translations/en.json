@@ -24,5 +24,16 @@
     "rate": "Rate",
     "description": "Description",
     "time": "Time",
-    "save": "Save"
+    "save": "Save",
+    "Please_enter_meal_name": "Please enter meal name",
+    "Please_enter_image_URL": "Please enter image URL",
+    "Please_enter_description": "Please enter description",
+    "Please_enter_rate": "Please enter rate",
+    "Meal_saved_successfully!": "Meal saved successfully!",
+    "No_meals_added_yet": "No meals added yet.",
+     "calories_text": "{} Calories",
+     "edit_profile": "Edit Profile",
+        "settings": "Settings",
+        "language": "Language",
+        "logout": "Logout"
 }

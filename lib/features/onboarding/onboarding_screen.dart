@@ -62,8 +62,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             icon: const Icon(Icons.language),
             color: AppColor.secondaryColor,
             style: ButtonStyle(
-              iconSize: MaterialStateProperty.all(24.sp),
-              padding: MaterialStateProperty.all(EdgeInsets.all(8.w)),
+              iconSize: WidgetStateProperty.all(24.sp),
+              padding: WidgetStateProperty.all(EdgeInsets.all(8.w)),
             ),
           ),
         ],
